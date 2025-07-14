@@ -1,124 +1,131 @@
 {
-    "manifest_version": 3,
-    "name": "GG.deals on Steam",
-    "version": "1.0",
-    "author": "Juzlus",
-    "icons": {
-        "128": "icons/128.png"
-    },
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "gg.deals-on-steam@juzlus"
-        }
-    },
-    "description": "An extension for Steam that displays the current lowest prices from GG.deals directly on the games pages.",
-    "permissions": [
-        "notifications",
-        "tabs",
-        "storage",
-        "unlimitedStorage",
-        "webRequest",
-        "webRequestBlocking"
-    ],
-    "action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "128": "icons/128.png"
-        }
-    },
-    "host_permissions": [
-        "https://store.steampowered.com/*",
-        "https://raw.githubusercontent.com/*",
-        "https://github.com/*",
-        "https://api.gg.deals/*"
-    ],
-    "background": {
-        "scripts": ["scripts/background.js"]
-    },
-    "web_accessible_resources": [
-        {
-            "resources": [ "popup.html", "icons/*.png" ],
-            "matches": [ "https://store.steampowered.com/*" ]
-        }
-    ],
-    "content_scripts": [
-        {
-            "matches": [
-                "https://store.steampowered.com/*"
-            ],
-            "js":[
-                "scripts/main.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://store.steampowered.com/app/*"
-            ],
-            "js":[
-                "scripts/app.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://store.steampowered.com/recommended/morelike/app/*",
-                "https://store.steampowered.com/recommended/morelike/bundle/*"
-            ],
-            "js":[
-                "scripts/recommended.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://store.steampowered.com/wishlist/*"
-            ],
-            "js":[
-                "scripts/wishlist.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://store.steampowered.com/cart"
-            ],
-            "js":[
-                "scripts/cart.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://store.steampowered.com/search/*"
-            ],
-            "js":[
-                "scripts/search.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        },
-        {
-            "matches": [
-                "https://store.steampowered.com/bundle/*"
-            ],
-            "js":[
-                "scripts/bundle.js"
-            ],
-            "css":[
-                "css/style.css"
-            ]
-        }
+  "manifest_version": 3,
+  "name": "GG.deals on Steam",
+  "version": "1.0",
+  "author": "Juzlus",
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gg.deals-on-steam@juzlus"
+    }
+  },
+  "description": "An extension for Steam that displays the current lowest prices from GG.deals directly on the games pages.",
+  "permissions": [
+    "notifications",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/128.png"
+    }
+  },
+  "host_permissions": [
+    "https://store.steampowered.com/*",
+    "https://raw.githubusercontent.com/*",
+    "https://github.com/*",
+    "https://api.gg.deals/*"
+  ],
+  "background": {
+    "scripts": [
+      "scripts/background.js"
     ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "icons/*.png"
+      ],
+      "matches": [
+        "https://store.steampowered.com/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/*"
+      ],
+      "js": [
+        "scripts/main.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://store.steampowered.com/app/*"
+      ],
+      "js": [
+        "scripts/app.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://store.steampowered.com/recommended/morelike/app/*",
+        "https://store.steampowered.com/recommended/morelike/bundle/*"
+      ],
+      "js": [
+        "scripts/recommended.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://store.steampowered.com/wishlist/*"
+      ],
+      "js": [
+        "scripts/wishlist.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://store.steampowered.com/cart"
+      ],
+      "js": [
+        "scripts/cart.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://store.steampowered.com/search/*"
+      ],
+      "js": [
+        "scripts/search.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://store.steampowered.com/bundle/*"
+      ],
+      "js": [
+        "scripts/bundle.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ]
 }
