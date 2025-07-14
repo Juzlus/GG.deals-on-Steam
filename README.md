@@ -39,7 +39,8 @@
     - Click the gear icon
     - Select the "`Install Add-on From File...`" option
 4. Select the folder with the extracted extension
-5. Open the [extension settings page](extension://cmhbooeepkcnoaamddkmoiocfinbanpi/popup.html)
+5. Open the extension settings page
+    - (extension://cmhbooeepkcnoaamddkmoiocfinbanpi/popup.html)
 6. Type your API key from [gg.deals/api](https://gg.deals/api/)
 
 
@@ -71,6 +72,7 @@
 <a href="https://github.com/Juzlus/HowLongToBeat-on-Steam">
   <img src="https://raw.githubusercontent.com/Juzlus/HowLongToBeat-on-Steam/refs/heads/main/icons/HowLongToBeat-on-Steam.png">
 </a>
+
 
 ## 📝 Feedback
 
