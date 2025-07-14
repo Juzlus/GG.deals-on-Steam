@@ -1,0 +1,262 @@
+:root {
+    --priceColor: #BEEE11;
+    --hoverPriceColor: #a6cc1b;
+    --priceBgColor: #344654;
+    --scaler: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1b2838;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+header {
+    background-color: #171d25;
+    height: calc(70px / var(--scaler));
+}
+
+main {
+    width: 750px;
+    margin-left: calc(50% - 375px);
+    color: #DCDEDF;
+}
+
+h3 {
+    font-size: calc(27px / var(--scaler));
+    border-bottom: calc(1px / var(--scaler)) solid #ccc;
+    margin: calc(20px / var(--scaler)) 0;
+}
+
+h1 {
+    color: #DCDEDF;
+    font-size: calc(30px / var(--scaler));
+    text-align: center;
+    height: 100%;
+    align-content: center;
+}
+
+.optionBlock {
+    display: block;
+    margin: calc(15px / var(--scaler)) 0;
+}
+
+p {
+    font-size: calc(18px / var(--scaler));
+    margin: 0;
+    display: inline;
+}
+
+small {
+    font-size: calc(12px / var(--scaler));
+    opacity: 0.8;
+}
+
+input[type="password"], input[type="text"], input[type="color"], select {
+    width: 100%;
+    padding: calc(5px / var(--scaler));
+    border: calc(1px / var(--scaler)) solid #ccc;
+    border-radius: calc(3px / var(--scaler));
+    font-size: calc(13px / var(--scaler));
+    margin: calc(10px / var(--scaler)) 0px;
+    cursor: pointer;
+    background-color: rgba(103, 193, 245, 0.2);
+    color: #67c1f5;
+    border: none;
+    box-shadow: calc(1px / var(--scaler)) calc(1px / var(--scaler)) 0px rgba(103, 193, 245, 0.15);
+    appearance: none;
+}
+
+#activeSubpages label, #priceType label {
+    font-size: calc(13px / var(--scaler));
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    line-height: calc(28px / var(--scaler));
+    margin-bottom: calc(2px / var(--scaler));
+    border-radius: calc(3px / var(--scaler));
+    transition: all 0.1s ease-in-out;
+}
+
+input[name="activeSubpages"], input[name="priceType"] {
+    display: none;
+}
+
+input[type="color"] {
+    transition: all 0.1s ease-in-out;
+}
+
+input[type="color"]:hover {
+    background-color: #67c1f5;
+    transition: all 0.1s ease-in-out;
+}
+
+#colorsPicker {
+    width: 40%;
+}
+
+#activeSubpages label:hover, #priceType label:hover {
+    background-color: #4e5157;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+#activeSubpages label:has(input:checked), #priceType label:has(input:checked) {
+    background-color: #67c1f588;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+#activeSubpages label a, #priceType label a {
+    padding: 0 calc(10px / var(--scaler));
+}
+
+#activeSubpages label a:nth-child(3), #priceType label a:nth-child(3) {
+    float: inline-end;
+}
+
+#activeSubpages label a:nth-child(2)::before, #priceType label a:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    width: calc(16px / var(--scaler));
+    height: calc(16px / var(--scaler));
+    background-position: top center;
+    margin-right: calc(10px / var(--scaler));
+    background-image: url(https://github.com/Juzlus/GG.deals-on-Steam/blob/server/icons/store_checkbox_blue.png?raw=true);
+    vertical-align: text-bottom;
+    transform: translateY(calc(.5px / var(--scaler)));
+}
+
+#activeSubpages label:has(input:checked) a:nth-child(2)::before, #priceType label:has(input:checked) a:nth-child(2)::before {
+    background-position: bottom center;
+}
+
+#activeSubpages label a:nth-child(3), #priceType label a:nth-child(3) {
+    opacity: 0.6;
+}
+
+select:focus, input:focus {
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select option {
+    background-color: rgba(43, 71, 94);
+    border: none;
+}
+
+#showApiKey {
+    float: inline-end;
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:link:hover {
+    text-decoration: underline;
+}
+
+#newVersion {
+    color: #67c1f5;
+}
+
+#clearStorage, #defaultColors {
+    border: none;
+    counter-reset: white;
+    border-radius: calc(3px / var(--scaler));
+    cursor: pointer;
+    padding: calc(5px / var(--scaler)) calc(10px / var(--scaler));
+    margin-bottom: calc(8px / var(--scaler));
+    background-color: red;
+    background-color: rgba(103, 193, 245, 0.2);
+    color: #67c1f5;
+    border: none;
+    box-shadow: calc(1px / var(--scaler)) calc(1px / var(--scaler)) 0px rgba(103, 193, 245, 0.15);
+    transition: all 0.1s ease-in-out;
+    font-size: calc(13px / var(--scaler));
+}
+
+#defaultColors {
+    position: absolute;
+    right: 30%;
+    margin-top: calc(-36px / var(--scaler));
+}
+
+#clearStorage:hover, #defaultColors:hover {
+    background-color: #67c1f5;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.clearBlock {
+    float: inline-end;
+    text-align: right;
+} 
+
+#span-reset {
+    float: inline-end;
+}
+
+#colorsPreview:hover {
+    color: var(--hoverPriceColor);
+    text-decoration: none;
+}
+
+#colorsPreview::before {
+    content: "";
+    left: calc(2px / var(--scaler));
+    position: absolute;
+    width: calc(11px / var(--scaler));
+    height: calc(11px / var(--scaler));
+    background-image: url(https://github.com/Juzlus/GG.deals-on-Steam/blob/server/icons/ggdeals-16x16.png?raw=true);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+}
+
+#colorsPreview {
+    line-height: calc(12px / var(--scaler));
+    font-size: calc(11px / var(--scaler));
+    padding: calc(1px / var(--scaler)) calc(3px / var(--scaler)) calc(2px / var(--scaler)) calc(17px / var(--scaler));
+    color: var(--priceColor);
+    background-color: var(--priceBgColor);
+    position: relative;
+    float: right;
+    scale: 3;
+    top: calc(-100px / var(--scaler));
+    left: calc(-30% + calc(37px / var(--scaler)));
+}
+
+@media only screen and (max-width: 1000px) {
+    :root {
+        --scaler: 1.5;
+    }
+
+    main {
+        width: calc(100% - 30px);
+        margin: 15px;
+    }
+
+    body {
+        width: 420px;
+        margin-right: 17px;
+    }
+
+    #defaultColors {
+        right: 17px;
+    }
+
+    input[type="color"] {
+        height: 20px;
+    }
+}

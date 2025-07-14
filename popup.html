@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/popup.css">
+        <script src="scripts/popup.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>GG.deals on Steam - Settings</h1>
+        </header>
+        <main>
+            <h3>General</h3>
+            <div class="optionBlock"></div>
+                <p>API key:</p>
+                <button id="showApiKey">👁</button>
+                <input id="apiKey" type="password">
+                <small>You can get your API key from <a href="https://gg.deals/api/" target="_blank">this page</a>.</small>
+            </div>
+            <div class="optionBlock">
+                <p>Region: </p>
+                <select id="region">
+                    <option value="au">Australia (AU)</option>
+                    <option value="be">Belgium (BE)</option>
+                    <option value="br">Brazil (BR)</option>
+                    <option value="ca">Canada (CA)</option>
+                    <option value="ch">Switzerland (CH)</option>
+                    <option value="de">Germany (DE)</option>
+                    <option value="dk">Denmark (DK)</option>
+                    <option value="es">Spain (ES)</option>
+                    <option value="eu">Europe (EU)</option>
+                    <option value="fi">Finland (FI)</option>
+                    <option value="fr">France (FR)</option>
+                    <option value="gb">United Kingdom (GB)</option>
+                    <option value="ie">Ireland (IE)</option>
+                    <option value="it">Italy (IT)</option>
+                    <option value="nl">Netherlands (NL)</option>
+                    <option value="no">Norway (NO)</option>
+                    <option value="pl">Poland (PL)</option>
+                    <option value="se">Sweden (SE)</option>
+                    <option value="us" selected>United States (US)</option>
+                </select>
+            </div>
+            <div class="optionBlock">
+                <p>Version: <b id="version"></b> <a style="display:none" id="newVersion" target="_blank" href="https://github.com/Juzlus/GG.deals-on-Steam/releases">(New version available)</a></p>
+                <div class="clearBlock">
+                    <button id="clearStorage">Clear Storage</button>
+                    <br>
+                    <small>The <b id="priceInStorage">0</b> prices stored in extension storage.</small>
+                </div>
+            </div>
+
+            <h3>Active subpages</h3>
+            <div id="activeSubpages">
+                <label>
+                    <input type="checkbox" name="activeSubpages" value="app"><a>App</a><a>store.steampowered.com/app/*</a>
+                </label>
+                <label>
+                    <input type="checkbox" name="activeSubpages" value="wishlist"><a>Wishlist</a><a>store.steampowered.com/wishlist/*</a>
+                </label>
+                <label>
+                    <input type="checkbox" name="activeSubpages" value="bundle"><a>Bundle</a><a>https://store.steampowered.com/bundle/*</a>
+                </label>
+                <label>
+                    <input type="checkbox" name="activeSubpages" value="cart"><a>Cart</a><a>store.steampowered.com/cart</a>
+                </label>
+                <label>
+                    <input type="checkbox" name="activeSubpages" value="search"><a>Search</a><a>https://store.steampowered.com/search/*</a>
+                </label>
+                <label>
+                    <input type="checkbox" name="activeSubpages" value="recommended"><a>Recommended</a><a>store.steampowered.com/recommended/morelike/app/*</a>
+                </label>
+            </div>
+
+            <h3>Price type</h3>
+            <div id="priceType">
+                <label>
+                    <input type="checkbox" name="priceType" value="official"><a>Official shops</a><a>Steam, Epic Games, Gog, Battle.net, Ubisoft Store, Microsoft Store, EA, Humble Store, Fanatical...</a>
+                </label>
+                <label>
+                    <input type="checkbox" name="priceType" value="keyshop"><a>Keyshops</a><a>G2A, Instant Gaming, Kinguin, CDKeys.com, GAMIVO, Eneba, HRK Game, K4G.com, Difmark...</a>
+                </label>
+            </div>
+
+            <h3>Style</h3>
+            <div class="optionBlock">
+                <div id="colorsPicker">
+                    <p>Primary color:</p>
+                    <input id="primaryColor" type="color">
+                    <p>Hover color:</p>
+                    <input id="secondaryColor" type="color">
+                    <p>Background color:</p>
+                    <input id="backgroundColor" type="color">
+                </div>
+                <div>
+                    <a href="#" id="colorsPreview">25.15 USD</a>
+                </div>
+                <button id="defaultColors">Default Style</button>
+            </div>
+
+            <h3>Ratelimit</h3>
+            <p>
+                <span id="span-remaining">Remaining API queries: <b id="ratelimit-remaining"></b> / <b id="ratelimit-limit"></b></span>
+                <span id="span-reset">Reset time: <b id="ratelimit-reset"></b></span>
+            </p>
+        </main>
+    </body>
+</html>
