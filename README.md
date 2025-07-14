@@ -39,8 +39,10 @@
     - Click the gear icon
     - Select the "`Install Add-on From File...`" option
 4. Select the folder with the extracted extension
-5. Open the extension settings page
-    - ![Prieview 1](https://github.com/Juzlus/GG.deals-on-Steam/blob/server/icons/settings.png?raw=true)
+5. <details>
+    <summary>Open the extension settings page</summary>
+    <img src="https://github.com/Juzlus/GG.deals-on-Steam/blob/server/icons/settings.png?raw=true">
+    </details>
 6. Type your API key from [gg.deals/api](https://gg.deals/api/)
 
 
